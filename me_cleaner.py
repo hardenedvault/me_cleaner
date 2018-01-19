@@ -454,8 +454,6 @@ def check_and_remove_modules_gen3(f, me_end, partition_offset,
 
             if name.endswith(".man"):
                 print("NOT removed, partition manif.")
-            elif name.endswith(".met"):
-                print("NOT removed, module metadata")
             elif any(name.startswith(m) for m in unremovable_modules_gen3):
                 print("NOT removed, essential")
             elif any(name.startswith(m) for m in modules_whitelist) or \
